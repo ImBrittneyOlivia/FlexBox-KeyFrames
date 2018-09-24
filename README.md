@@ -1,6 +1,7 @@
 # FlexBox-KeyFrames
 Beginners project on how to incorporate keyframes into our Flexbox project. 
-![](/Images/Delay.png)
+![](/Images/delay.png)
 ![](/Images/direction.png)
-![](/Images/Iteration.png)
-![](/Images/Rolling%20square.png)
+![](/Images/iteration.png)
+![](/Images/rotate.png)
+![](/Images/excelerate.png)
