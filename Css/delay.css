@@ -1,0 +1,33 @@
+/* DELAY before animation begins*/
+#example2 {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 217, 255);
+}
+#box-delay {
+  height: 20em;
+  width: 20em;
+  position: relative;
+  background-color: rgb(9, 255, 0);
+  animation-name: box-delay-animation; /*defined our box-animation below now animation-name will apply it to our box div element*/
+  animation-duration: 3s; /* how long the animation will last*/
+  animation-delay: 2s;
+}
+/*Animate box from left to right*/
+@keyframes box-delay-animation {
+  0% {
+    right: 0; /*because its relative its like it hasn't moved at all when set left 0*/
+  }
+  35% {
+    right: -15em; /* to the left neg 15*/
+  }
+  70% {
+    right: 15em; /* then at 70 percent to the right positive 15*/
+  }
+  100% {
+    right: 0; /* then left zero so it goes back to its original position*/
+  }
+}

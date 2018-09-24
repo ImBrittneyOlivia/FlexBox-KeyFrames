@@ -1,0 +1,44 @@
+/*Rotate- uses the transform property and the rotate function--also making it a circle as it rotates*/
+#example7 {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(219, 233, 91);
+}
+#box-rotate {
+  height: 20em;
+  width: 20em;
+  position: relative;
+  background-color: rgb(100, 102, 107);
+  animation: box-rotate-animation 1.5s ease-in-out 1s 2 normal;
+}
+/*Animate box from left to right*/
+@keyframes box-rotate-animation {
+  0% {
+    left: 0; /*because its relative its like it hasn't moved at all when set left 0*/
+  }
+  35% {
+    left: -15em; /* to the left neg 15*/
+    transform: rotate(0deg);
+    border-radius: 0em; /*changes square to circle as it goes from left to right --starts off with 0 so a square*/
+  }
+  70% {
+    left: 15em; /* then at 70 percent to the right positive 15*/
+    transform: rotate(360deg);
+    border-radius: 10em; /*changes square to circle as it goes from left to right --has to be half of the size of your element*/
+  }
+  71% {
+    transform: rotate(0deg);
+  }
+  /*
+Now our animation will rotate the square but it rotates at all positions in the animation.
+ to make the square only rotate when it's going from left to right.We have to set the rotation when it's in 
+ the left position to 0 degrees because that's the default.
+And then right after the square rotates from 0 to 360 degrees we have to rotate it back to 0 degrees
+so that it doesn't rotate between 70 and 100 percent. So we can just set the rotation back to zero at 71 percent*/
+  100% {
+    left: 0; /* then left zero so it goes back to its original position*/
+  }
+}

@@ -1,0 +1,39 @@
+/* Animation exceleration- between each point in keyfram*/
+#example5 {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(134, 240, 93);
+}
+#box-exceleration {
+  height: 20em;
+  width: 20em;
+  position: relative;
+  background-color: rgb(166, 124, 212);
+  animation-name: box-exceleration-animation; /*defined our box-animation below now animation-name will apply it to our box div element*/
+  animation-duration: 1.5s; /* how long the animation will last*/
+  animation-delay: 1s;
+  animation-iteration-count: 2; /* how many times you want the animation to loop ---this can also be (infinite) so never stops */
+  animation-direction: normal;
+  animation-timing-function: ease-in-out; /*speed up and slow down between each point*/
+  /* ease in - will start slow and speed up between each point in the animation*/
+  /* ease out - start fast and slow down between each point in the animation*/
+  /* it can also be linear -acceleration between each point in the keyframe animation will be zero.*/
+}
+/*Animate box from left to right*/
+@keyframes box-exceleration-animation {
+  0% {
+    left: 0; /*because its relative its like it hasn't moved at all when set left 0*/
+  }
+  35% {
+    left: -15em; /* to the left neg 15*/
+  }
+  70% {
+    left: 15em; /* then at 70 percent to the right positive 15*/
+  }
+  100% {
+    left: 0; /* then left zero so it goes back to its original position*/
+  }
+}
